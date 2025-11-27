@@ -3,7 +3,6 @@ if len(sys.argv) != 6:
     sys.exit(1)
     
 marks = [float(arg) for arg in sys.argv[1:6]]
-
 average = sum(marks) / len(marks)
 
 if average >= 90:
