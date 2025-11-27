@@ -1,22 +1,32 @@
 import sys
-if len(sys.argv) != 6:
-    print("Usage: python grade.py mark1 mark2 mark3 mark4 mark5")
-    sys.exit(1)
-    
-marks = [float(arg) for arg in sys.argv[1:6]]
-average = sum(marks) / len(marks)
 
-if average >= 90:
-    grade = "A"
-elif average >= 75:
-    grade = "B"
-elif average >= 60:
-    grade = "C"
-elif average >= 40:
-    grade = "D"
+if len(sys.argv) == 6:
+    script_name = sys.argv[0]
+    n1 = int(sys.argv[1])
+    n2 = int(sys.argv[2])
+    n3 = int(sys.argv[3])
+    n4 = int(sys.argv[4])
+    n5 = int(sys.argv[5])
 else:
-    grade = "Fail"
+    print("NO input values - Using default values")
+    script_name = sys.argv[0]
+    n1 = 60
+    n2 = 80
+    n3 = 75
+    n4 = 60
+    n5 = 88
 
-print("\n- Result -")
-print(f"Average Marks: {average:.2f}")
-print(f"Grade: {grade}")
+avg = (n1 + n2 + n3 + n4 + n5) / 5
+print(f"Average is: {avg}")
+if avg > 90:
+    print("A grade")
+elif avg > 80:
+    print("B grade")
+elif avg > 70:
+    print("C grade")
+elif avg > 60:
+    print("D grade")
+elif avg > 50:
+    print("E grade")
+else:
+    print("FAIL")
