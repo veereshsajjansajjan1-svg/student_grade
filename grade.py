@@ -1,7 +1,7 @@
 marks = []
 for i in range(1, 6):
     mark = float(input(f"Enter marks for subject {i}: "))
-    marks.append(mark)
+ marks.append(mark)
 average = sum(marks) / 5
 if average >= 90: grade = "A"
 elif average >= 75: grade = "B"
