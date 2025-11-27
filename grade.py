@@ -15,7 +15,6 @@ else:
     n3 = 75
     n4 = 60
     n5 = 88
-
 avg = (n1 + n2 + n3 + n4 + n5) / 5
 print(f"Average is: {avg}")
 if avg > 90:
