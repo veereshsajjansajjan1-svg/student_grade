@@ -1,12 +1,13 @@
-marks = []
-for i in range(1, 6):
-    mark = float(input(f"Enter marks for subject {i}: "))
- marks.append(mark)
+import sys
+if len(sys.argv) != 6:  
+    print("Usage: python grade.py mark1 mark2 mark3 mark4 mark5")
+    sys.exit(1)
+marks = [float(arg) for arg in sys.argv[1:6]]
 average = sum(marks) / 5
 if average >= 90: grade = "A"
 elif average >= 75: grade = "B"
-elif average >= 60: grade = "C"
-elif average >= 40:grade = "D"
+elif average >= 60:grade = "C"
+elif average >= 40: grade = "D"
 else:
     grade = "Fail"
 print("\n- Result -")
