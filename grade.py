@@ -1,3 +1,4 @@
+import sys
 if len(sys.argv) != 6:
     print("Usage: python grade.py mark1 mark2 mark3 mark4 mark5")
     sys.exit(1)
